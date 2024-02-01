@@ -6,11 +6,43 @@
 
     <groupId>github.xuanyunyue.seckill</groupId>
     <artifactId>seckill-parent</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>seckill-operation</module>
+        <module>seckill-page</module>
+        <module>seckill-inventory</module>
+        <module>seckill-webAPI</module>
+        <module>seckill-flashSale</module>
+        <module>seckill-order</module>
+        <module>seckill-eurekaServer</module>
+        <module>seckill-common</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
-    
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-parent</artifactId>
+                <version>1.5.9.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Edgware.SR3</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+
+
 </project>

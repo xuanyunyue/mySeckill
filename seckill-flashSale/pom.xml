@@ -11,6 +11,27 @@
 
     <artifactId>seckill-flashSale</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>github.xuanyunyue.seckill</groupId>
+            <artifactId>seckill-common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>github.xuanyunyue.Application_FlashSale</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
